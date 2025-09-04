@@ -25,8 +25,7 @@ export default function Auguri() {
                     rounded-full border-2 border-dashed p-5 text-9xl"
             >
                 <span
-                    className="animation-std-text change-color-text relative
-                        top-2.5"
+                    className="animation-std-text change-color-text relative bottom-5"
                 >
                     18
                 </span>
