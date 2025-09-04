@@ -22,7 +22,7 @@ export default function Auguri() {
             <div className="animation-light-text text-4xl">TANTI AUGURI</div>
             <div
                 className="animation-std-border flex items-center justify-center
-                    rounded-full border-2 border-dashed p-5 text-9xl"
+                    rounded-full border-2 border-dashed p-5 text-8xl"
             >
                 <span
                     className="animation-std-text change-color-text relative bottom-5"

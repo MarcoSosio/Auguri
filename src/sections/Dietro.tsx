@@ -18,7 +18,7 @@ export default function Dietro() {
                 Scopri cosa c'è dietro
             </button>
             <div className={`${!videoVisible && "hidden"} flex flex-col items-center`}>
-                <video src={video} className="w-60"></video>
+                <video src={video} className="w-60" controls autoPlay muted></video>
                 <button
                     className="text-red-400 mt-2"
                     onClick={() => {
