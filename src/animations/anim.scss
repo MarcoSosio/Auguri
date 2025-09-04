@@ -1,0 +1,70 @@
+@use 'sass:math';
+@use "sass:map";
+
+@mixin animation-mixin($type-list, $color-list, $proprety) {
+    $list-len: length(
+        $list: $color-list
+    );
+    $perc: 0;
+    @keyframes animation-#{$type-list}-#{$proprety} {
+        @each $c in $color-list {
+            $n: $perc + "%";
+            #{$n} {
+                #{$proprety}: $c;
+            }
+            $perc: $perc + math.div(100, $list-len - 1);
+        }
+    };
+    animation-name: animation-#{$type-list}-#{$proprety};
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+$std-color: (
+    "type": "std",
+    "colors": (
+        var(--color-red-500),
+        var(--color-orange-500),
+        var(--color-yellow-300),
+        var(--color-green-500),
+        var(--color-blue-500),
+        var(--color-fuchsia-500)
+    )
+);
+
+$light-color: (
+    "type": "light",
+    "colors": (
+        var(--color-red-300),
+        var(--color-orange-300),
+        var(--color-yellow-200),
+        var(--color-green-300),
+        var(--color-blue-300),
+        var(--color-fuchsia-300)
+    )
+);
+
+.animation-std-border {
+    @include animation-mixin(
+        map.get($std-color, "type"),
+        map.get($std-color, "colors"),
+        "border-color"
+    );
+}
+
+.animation-std-text {
+    @include animation-mixin(
+        map.get($std-color, "type"),
+        map.get($std-color, "colors"),
+        "color"
+    );
+}
+
+.animation-light-text {
+    @include animation-mixin(
+        map.get($light-color, "type"),
+        map.get($light-color, "colors"),
+        "color"
+    );
+}

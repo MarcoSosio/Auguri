@@ -1,0 +1,82 @@
+.animation-std-border {
+  animation-name: animation-std-border-color;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes animation-std-border-color {
+  0% {
+    border-color: var(--color-red-500);
+  }
+  20% {
+    border-color: var(--color-orange-500);
+  }
+  40% {
+    border-color: var(--color-yellow-300);
+  }
+  60% {
+    border-color: var(--color-green-500);
+  }
+  80% {
+    border-color: var(--color-blue-500);
+  }
+  100% {
+    border-color: var(--color-fuchsia-500);
+  }
+}
+
+.animation-std-text {
+  animation-name: animation-std-color;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes animation-std-color {
+  0% {
+    color: var(--color-red-500);
+  }
+  20% {
+    color: var(--color-orange-500);
+  }
+  40% {
+    color: var(--color-yellow-300);
+  }
+  60% {
+    color: var(--color-green-500);
+  }
+  80% {
+    color: var(--color-blue-500);
+  }
+  100% {
+    color: var(--color-fuchsia-500);
+  }
+}
+
+.animation-light-text {
+  animation-name: animation-light-color;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes animation-light-color {
+  0% {
+    color: var(--color-red-300);
+  }
+  20% {
+    color: var(--color-orange-300);
+  }
+  40% {
+    color: var(--color-yellow-200);
+  }
+  60% {
+    color: var(--color-green-300);
+  }
+  80% {
+    color: var(--color-blue-300);
+  }
+  100% {
+    color: var(--color-fuchsia-300);
+  }
+}
+
+/*# sourceMappingURL=anim.css.map */
